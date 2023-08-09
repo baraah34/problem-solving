@@ -1,0 +1,14 @@
+q2-user should enter an array of numbers and you are giving the number, one of the two numbers that equal the sum of the given number.
+var array = [1, 2, 3, 5,6];
+
+const getNumbers = (numbers) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let x = i + 1; x < array.length; x++) {
+            if (array[i] + array[x] === numbers) {
+                console.log(array[i] + " and " + array[x]);
+            }
+        }
+    }
+}
+
+getNumbers(6);
