@@ -1,0 +1,10 @@
+
+
+const getGender = (username)=>{
+    if (username.length % 2 ===0){
+        console.log(`${username}   is boy`)
+    }else{
+        console.log(`${username}   is girl`)
+    }
+}
+getGender("mohammed")
