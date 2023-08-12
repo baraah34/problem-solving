@@ -1,0 +1,10 @@
+const a=[1,2,2,8]
+const b=[2,4,6,12]
+let counter = 0
+for(let i=0;i< a.length ;i++){
+    if(( a[i] / b[i] +a[i] / b[i]) == 1){
+
+        counter++
+    }
+}
+console.log(counter)
