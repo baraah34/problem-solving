@@ -1,0 +1,10 @@
+const getdice = (x, y) => {
+    if (x+ y > 6) {
+        return "good";
+    } else {
+        return "bad";
+    }
+}
+
+const result = getdice(5, 2);
+console.log(`Result: ${result}`);
