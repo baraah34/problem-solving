@@ -1,0 +1,18 @@
+function Substring(S) {
+    let counter = 0
+        
+    for (let i = 0; i < S.length; i++) {
+        lower = 0,
+        upper = 0;
+ 
+        for (let x = i; x < S.length; x++) {
+            if (S[x] === S[x].toUpperCase()) upper++;
+            else lower++;
+            if (upper == lower) counter++;
+        }
+    }
+    return counter;
+}
+ 
+let S = "WomensDAY";
+console.log(Substring(S, S.length));
