@@ -1,0 +1,20 @@
+const range=(arr, A, B)=> {
+    
+    for (let x = 0; x < arr.length; x++) {
+        if (arr[x] >= A && arr[x] <= B) {
+            return true; 
+        }
+    }
+    return false; 
+}
+
+
+let array = [1,4,5,2,7,8,3];
+let A = 2;
+let B = 5;
+
+if (range(array, A, B)) {
+    console.log("it has element  between  "  +A+   " and "+B);
+} else {
+    console.log(" does has elements in the range.");
+}
