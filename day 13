@@ -1,0 +1,20 @@
+const FinddistinctSum = (n) => {
+    const distinctsum = new Set();
+    const x = n.length;
+
+    for (let i = 0; i < (1 << x); i++) {
+        let Sum = 0;
+        for (let j = 0; j < x; j++) {
+            if (i & (1 << j)) {
+                Sum += n[j];
+            }
+        }
+        distinctsum.add(Sum);
+    }
+
+    return Array.from(distinctsum);
+}
+
+const input = [1, 2];
+const Sums = FinddistinctSum(input);
+console.log(Sums);
