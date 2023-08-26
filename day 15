@@ -1,0 +1,27 @@
+function Character(s) {
+    const Count = {};  
+
+    
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        if (Count[char]) {
+            Count[char]++;
+        } else {
+            Count[char] = 1;
+        }
+    }
+
+    
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        if (Count[char] === 1) {
+            return char;
+        }
+    }
+
+    
+    return "S";
+}
+
+const input = "hello";
+console.log(Character(input));
