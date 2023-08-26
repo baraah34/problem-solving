@@ -1,0 +1,29 @@
+function Postfix(exp) {
+    const stack = [];
+
+    const operators = {
+        '+': (x, y) => x + y,
+        '-': (x, y) => x - y,
+        '*': (x, y) => x * y,
+        '/': (x, y) => x / y
+    };
+
+    for (let i = 0; i < exp.length; i++) {
+        const t = exp[i];
+        if (!isNaN(t)) {
+            stack.push(parseFloat(t));
+        } else if (operators[t]) {
+            const operand2 = stack.pop();
+            const operand1 = stack.pop();
+            const result = operators[t](operand1, operand2);
+            stack.push(result);
+        }
+    }
+
+    return stack.pop();
+}
+
+const postfixExp = "231*+9-";
+console.log(Postfix(postfixExp));
+
+
