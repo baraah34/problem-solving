@@ -1,0 +1,6 @@
+function Power(N) {
+   
+    return N > 0 && Math.log2(N) % 1 === 0;
+}
+
+console.log(Power(8)); 
